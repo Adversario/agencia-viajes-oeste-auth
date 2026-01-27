@@ -18,6 +18,7 @@ Todo funciona en entorno local.
 - npm
 
 Verificar:
+
 node -v
 
 npm -v

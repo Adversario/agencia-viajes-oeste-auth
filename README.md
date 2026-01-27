@@ -30,6 +30,7 @@ npm -v
 ### 1) Clonar el repositorio
 
 git clone https://github.com/Adversario/agencia-viajes-oeste-auth
+
 cd agencia-viajes-oeste-auth
 
 ### 2) Instalar dependencias del Frontend
@@ -95,8 +96,6 @@ También es posible registrar nuevos usuarios desde la pantalla de Registro.
 3. Acceso al Dashboard
 4. Token JWT guardado en localStorage
 
----
-
 ### Login con GitHub
 
 1. En /login hacer clic en “Iniciar sesión con GitHub”
@@ -104,20 +103,8 @@ También es posible registrar nuevos usuarios desde la pantalla de Registro.
 3. Redirección automática al Dashboard
 4. Se muestran los datos del usuario GitHub
 
----
-
 ### Logout
 
 - Elimina el token y los datos de sesión
 - Redirige a /login
 - Impide volver al Dashboard sin autenticación
-
----
-
-## Seguridad implementada
-
-- Contraseñas hasheadas con bcrypt
-- JWT generado por el backend
-- OAuth GitHub con backend intermediario
-- Rutas protegidas en el frontend
-- No se exponen secretos en el cliente

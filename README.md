@@ -30,7 +30,6 @@ npm -v
 ### 1) Clonar el repositorio
 
 git clone https://github.com/Adversario/agencia-viajes-oeste-auth
-
 cd agencia-viajes-oeste-auth
 
 ### 2) Instalar dependencias del Frontend
@@ -44,7 +43,7 @@ npm install
 
 ---
 
-## Variables de entorno (IMPORTANTE)
+## Variables de entorno
 
 El archivo .env viene incluido en este repositorio con credenciales ya completadas para que funcione la aplicación.
 
@@ -62,8 +61,6 @@ npm run dev
 
 Debe mostrar:
 Backend corriendo en http://localhost:4000
-
----
 
 ### Terminal 2 — Frontend
 
@@ -84,8 +81,6 @@ Email: hola@correo.cl
 Password: 123456
 
 También es posible registrar nuevos usuarios desde la pantalla de Registro.
-
----
 
 ## Flujo de la aplicación
 

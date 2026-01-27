@@ -18,7 +18,6 @@ Todo funciona en entorno local.
 - npm
 
 Verificar:
-```bash
 node -v
 npm -v
 
@@ -26,18 +25,18 @@ npm -v
 
 ### 1) Clonar el repositorio
 
-```bash
 git clone https://github.com/Adversario/agencia-viajes-oeste-auth
+
 cd agencia-viajes-oeste-auth
 
 ### 2) Instalar dependencias del Frontend
 
-```bash
 npm install
 
 ### 3) Instalar dependencias del Backend
 
 cd backend
+
 npm install
 
 ## Variables de entorno

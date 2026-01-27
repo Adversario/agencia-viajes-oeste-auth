@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+# Agencia de Viajes Oeste — Autenticación Local y GitHub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación desarrollada para la asignatura Desarrollo Frontend III
 
-## Available Scripts
+La aplicación implementa:
+- Registro y Login local (Node.js + Express)
+- Autenticación GitHub OAuth
+- Rutas protegidas
+- Dashboard con información del usuario
+- Logout completo
+- Persistencia local en archivo JSON
 
-In the project directory, you can run:
+Todo funciona en entorno local.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Requisitos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js
+- npm
 
-### `npm test`
+Verificar:
+node -v
+npm -v
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Instalación
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1) Clonar el repositorio
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+git clone https://github.com/Adversario/agencia-viajes-oeste-auth
+cd agencia-viajes-oeste-auth
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2) Instalar dependencias del Frontend
 
-### `npm run eject`
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3) Instalar dependencias del Backend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cd backend
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Variables de entorno (IMPORTANTE)
 
-## Learn More
+El archivo .env viene incluido en este repositorio con credenciales ya completadas para que funcione la aplicación.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Ubicación del archivo:
+backend/.env
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Ejecución (2 terminales)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Terminal 1 — Backend
 
-### Analyzing the Bundle Size
+cd backend
+npm run dev
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Debe mostrar:
+Backend corriendo en http://localhost:4000
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Terminal 2 — Frontend
 
-### Advanced Configuration
+Desde la raíz del proyecto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+npm start
 
-### Deployment
+Abrir en el navegador:
+http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Usuarios de prueba
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Usuario local (persistido en users.json)
+
+Email: hola@correo.cl  
+Password: 123456
+
+También es posible registrar nuevos usuarios desde la pantalla de Registro.
+
+---
+
+## Flujo de la aplicación
+
+### Login Local
+
+1. Ir a /login
+2. Ingresar email y password
+3. Acceso al Dashboard
+4. Token JWT guardado en localStorage
+
+---
+
+### Login con GitHub
+
+1. En /login hacer clic en “Iniciar sesión con GitHub”
+2. Autorizar en GitHub
+3. Redirección automática al Dashboard
+4. Se muestran los datos del usuario GitHub
+
+---
+
+### Logout
+
+- Elimina el token y los datos de sesión
+- Redirige a /login
+- Impide volver al Dashboard sin autenticación
+
+---
+
+## Seguridad implementada
+
+- Contraseñas hasheadas con bcrypt
+- JWT generado por el backend
+- OAuth GitHub con backend intermediario
+- Rutas protegidas en el frontend
+- No se exponen secretos en el cliente

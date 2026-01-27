@@ -12,8 +12,6 @@ La aplicación implementa:
 
 Todo funciona en entorno local.
 
----
-
 ## Requisitos
 
 - Node.js
@@ -22,8 +20,6 @@ Todo funciona en entorno local.
 Verificar:
 node -v
 npm -v
-
----
 
 ## Instalación
 
@@ -41,16 +37,12 @@ npm install
 cd backend
 npm install
 
----
-
 ## Variables de entorno
 
 El archivo .env viene incluido en este repositorio con credenciales ya completadas para que funcione la aplicación.
 
 Ubicación del archivo:
 backend/.env
-
----
 
 ## Ejecución (2 terminales)
 
@@ -70,8 +62,6 @@ npm start
 
 Abrir en el navegador:
 http://localhost:3000
-
----
 
 ## Usuarios de prueba
 

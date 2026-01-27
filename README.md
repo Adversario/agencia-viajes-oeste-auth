@@ -19,6 +19,7 @@ Todo funciona en entorno local.
 
 Verificar:
 node -v
+
 npm -v
 
 ## Instalación
@@ -51,6 +52,7 @@ backend/.env
 ### Terminal 1 — Backend
 
 cd backend
+
 npm run dev
 
 Debe mostrar:

@@ -19,23 +19,23 @@ Todo funciona en entorno local.
 
 Verificar:
 ```node -v
-npm -v```
+npm -v
 
 ## Instalación
 
 ### 1) Clonar el repositorio
 
 ```git clone https://github.com/Adversario/agencia-viajes-oeste-auth
-cd agencia-viajes-oeste-auth```
+cd agencia-viajes-oeste-auth
 
 ### 2) Instalar dependencias del Frontend
 
-```npm install```
+```npm install
 
 ### 3) Instalar dependencias del Backend
 
 ```cd backend
-npm install```
+npm install
 
 ## Variables de entorno
 
@@ -49,7 +49,7 @@ backend/.env
 ### Terminal 1 — Backend
 
 ```cd backend
-npm run dev```
+npm run dev
 
 Debe mostrar:
 Backend corriendo en http://localhost:4000
@@ -58,7 +58,7 @@ Backend corriendo en http://localhost:4000
 
 Desde la raíz del proyecto:
 
-```npm start```
+```npm start
 
 Abrir en el navegador:
 http://localhost:3000

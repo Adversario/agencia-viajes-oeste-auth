@@ -41,19 +41,19 @@ export default function App({ initialData }) {
         <form method="POST" action="/solicitudes">
           <div className="row">
             <div>
-              <label>1) ID solicitud (autogenerado servidor)</label>
+              <label>ID solicitud (autogenerado servidor)</label>
               <input value="(se asigna al guardar)" readOnly />
             </div>
 
             <div>
-              <label>11) Fecha registro (servidor)</label>
+              <label>Fecha registro (servidor)</label>
               <input value="(se asigna al guardar)" readOnly />
             </div>
           </div>
 
           <div className="row">
             <div>
-              <label>2) RUT (Chile)</label>
+              <label>RUT (Chile)</label>
               <input
                 name="rut"
                 required
@@ -65,7 +65,7 @@ export default function App({ initialData }) {
             </div>
 
             <div>
-              <label>4) Email</label>
+              <label>Email</label>
               <input name="email" type="email" required defaultValue={form?.email || ""} />
               {errors?.email ? <p className="error">{errors.email}</p> : null}
             </div>
@@ -73,13 +73,13 @@ export default function App({ initialData }) {
 
           <div className="row">
             <div>
-              <label>3) Nombre cliente</label>
+              <label>Nombre cliente</label>
               <input name="nombreCliente" required minLength={2} defaultValue={form?.nombreCliente || ""} />
               {errors?.nombreCliente ? <p className="error">{errors.nombreCliente}</p> : null}
             </div>
 
             <div>
-              <label>8) Nombre cliente buscable</label>
+              <label>Nombre cliente buscable</label>
               <input
                 name="nombreBuscable"
                 list="clientes"
@@ -98,13 +98,13 @@ export default function App({ initialData }) {
 
           <div className="row">
             <div>
-              <label>5) Origen</label>
+              <label>Origen</label>
               <input name="origen" required defaultValue={form?.origen || ""} />
               {errors?.origen ? <p className="error">{errors.origen}</p> : null}
             </div>
 
             <div>
-              <label>6) Destino</label>
+              <label>Destino</label>
               <input name="destino" required defaultValue={form?.destino || ""} />
               {errors?.destino ? <p className="error">{errors.destino}</p> : null}
             </div>
@@ -112,7 +112,7 @@ export default function App({ initialData }) {
 
           <div className="row">
             <div>
-              <label>7) Tipo viaje</label>
+              <label>Tipo viaje</label>
               <select name="tipoViaje" defaultValue={form?.tipoViaje || "solo_ida"} required>
                 <option value="solo_ida">Solo ida</option>
                 <option value="ida_vuelta">Ida y vuelta</option>
@@ -121,7 +121,7 @@ export default function App({ initialData }) {
             </div>
 
             <div>
-              <label>12) Estado</label>
+              <label>Estado</label>
               <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginTop: 8 }}>
                 <label style={{ marginTop: 0 }}>
                   <input type="radio" name="estado" value="pendiente" defaultChecked={(form?.estado || "pendiente") === "pendiente"} required />{" "}
@@ -142,13 +142,13 @@ export default function App({ initialData }) {
 
           <div className="row">
             <div>
-              <label>9) Fecha salida</label>
+              <label>Fecha salida</label>
               <input name="fechaSalida" type="datetime-local" required defaultValue={form?.fechaSalida || ""} />
               {errors?.fechaSalida ? <p className="error">{errors.fechaSalida}</p> : null}
             </div>
 
             <div>
-              <label>10) Fecha regreso</label>
+              <label>Fecha regreso</label>
               <input name="fechaRegreso" type="datetime-local" required defaultValue={form?.fechaRegreso || ""} />
               {errors?.fechaRegreso ? <p className="error">{errors.fechaRegreso}</p> : null}
             </div>

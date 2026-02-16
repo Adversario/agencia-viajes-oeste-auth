@@ -75,17 +75,17 @@ function App({ initialData }) {
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", { method: "POST", action: "/solicitudes", children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "row", children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "1) ID solicitud (autogenerado servidor)" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "ID solicitud (autogenerado servidor)" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", { value: "(se asigna al guardar)", readOnly: true })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "11) Fecha registro (servidor)" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "Fecha registro (servidor)" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", { value: "(se asigna al guardar)", readOnly: true })
           ] })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "row", children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "2) RUT (Chile)" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "RUT (Chile)" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
               "input",
               {
@@ -99,19 +99,19 @@ function App({ initialData }) {
             errors?.rut ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "error", children: errors.rut }) : null
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "4) Email" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "Email" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", { name: "email", type: "email", required: true, defaultValue: form?.email || "" }),
             errors?.email ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "error", children: errors.email }) : null
           ] })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "row", children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "3) Nombre cliente" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "Nombre cliente" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", { name: "nombreCliente", required: true, minLength: 2, defaultValue: form?.nombreCliente || "" }),
             errors?.nombreCliente ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "error", children: errors.nombreCliente }) : null
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "8) Nombre cliente buscable" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "Nombre cliente buscable" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
               "input",
               {
@@ -128,19 +128,19 @@ function App({ initialData }) {
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "row", children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "5) Origen" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "Origen" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", { name: "origen", required: true, defaultValue: form?.origen || "" }),
             errors?.origen ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "error", children: errors.origen }) : null
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "6) Destino" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "Destino" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", { name: "destino", required: true, defaultValue: form?.destino || "" }),
             errors?.destino ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "error", children: errors.destino }) : null
           ] })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "row", children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "7) Tipo viaje" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "Tipo viaje" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("select", { name: "tipoViaje", defaultValue: form?.tipoViaje || "solo_ida", required: true, children: [
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", { value: "solo_ida", children: "Solo ida" }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", { value: "ida_vuelta", children: "Ida y vuelta" })
@@ -148,7 +148,7 @@ function App({ initialData }) {
             errors?.tipoViaje ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "error", children: errors.tipoViaje }) : null
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "12) Estado" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "Estado" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", gap: 14, flexWrap: "wrap", marginTop: 8 }, children: [
               /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", { style: { marginTop: 0 }, children: [
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", { type: "radio", name: "estado", value: "pendiente", defaultChecked: (form?.estado || "pendiente") === "pendiente", required: true }),
@@ -171,12 +171,12 @@ function App({ initialData }) {
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "row", children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "9) Fecha salida" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "Fecha salida" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", { name: "fechaSalida", type: "datetime-local", required: true, defaultValue: form?.fechaSalida || "" }),
             errors?.fechaSalida ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "error", children: errors.fechaSalida }) : null
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "10) Fecha regreso" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { children: "Fecha regreso" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", { name: "fechaRegreso", type: "datetime-local", required: true, defaultValue: form?.fechaRegreso || "" }),
             errors?.fechaRegreso ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "error", children: errors.fechaRegreso }) : null
           ] })

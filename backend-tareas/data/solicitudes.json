@@ -1,0 +1,41 @@
+[
+  {
+    "idSolicitud": 1,
+    "dni": "123456789",
+    "nombre": "Prueba",
+    "email": "prueba@test.cl",
+    "origen": "Santiago",
+    "destino": "Concepción",
+    "tipoViaje": "solo_ida",
+    "fechaSalida": "2026-02-18T17:00",
+    "fechaRegreso": "2026-02-18T22:40",
+    "fechaRegistro": "2026-02-16T06:11:55.265Z",
+    "estado": "pendiente"
+  },
+  {
+    "idSolicitud": 2,
+    "dni": "123456789",
+    "nombre": "Test",
+    "email": "prueba@tests.cl",
+    "origen": "Santiago",
+    "destino": "Arica",
+    "tipoViaje": "ida_vuelta",
+    "fechaSalida": "2026-02-17T03:21",
+    "fechaRegreso": "2026-02-19T03:21",
+    "fechaRegistro": "2026-02-16T06:21:32.653Z",
+    "estado": "en_proceso"
+  },
+  {
+    "idSolicitud": 3,
+    "dni": "123456789",
+    "nombre": "Proof",
+    "email": "proof@test.cl",
+    "origen": "Santiago",
+    "destino": "Valdivia",
+    "tipoViaje": "ida_vuelta",
+    "fechaSalida": "2026-02-17T03:21",
+    "fechaRegreso": "2026-02-21T03:22",
+    "fechaRegistro": "2026-02-16T06:22:04.902Z",
+    "estado": "finalizada"
+  }
+]

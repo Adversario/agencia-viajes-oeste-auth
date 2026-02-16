@@ -1,18 +1,5 @@
 [
   {
-    "idSolicitud": 1,
-    "dni": "123456789",
-    "nombre": "Prueba",
-    "email": "prueba@test.cl",
-    "origen": "Santiago",
-    "destino": "Concepción",
-    "tipoViaje": "solo_ida",
-    "fechaSalida": "2026-02-18T17:00",
-    "fechaRegreso": "2026-02-18T22:40",
-    "fechaRegistro": "2026-02-16T06:11:55.265Z",
-    "estado": "pendiente"
-  },
-  {
     "idSolicitud": 2,
     "dni": "123456789",
     "nombre": "Test",

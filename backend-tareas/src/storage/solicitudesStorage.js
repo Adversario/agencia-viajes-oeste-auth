@@ -10,7 +10,7 @@ function readJsonSafe(filePath) {
     if (!raw.trim()) return [];
     const parsed = JSON.parse(raw);
     return Array.isArray(parsed) ? parsed : [];
-  } catch (e) {
+  } catch {
     return [];
   }
 }
@@ -38,16 +38,8 @@ async function addSolicitud(form) {
 
   const nueva = {
     idSolicitud: maxId + 1,
-    dni: form.dni,
-    nombre: form.nombre,
-    email: form.email,
-    origen: form.origen,
-    destino: form.destino,
-    tipoViaje: form.tipoViaje,
-    fechaSalida: form.fechaSalida,
-    fechaRegreso: form.fechaRegreso,
-    fechaRegistro: new Date().toISOString(),
-    estado: form.estado
+    ...form,
+    fechaRegistro: new Date().toISOString()
   };
 
   solicitudes.push(nueva);
@@ -55,4 +47,18 @@ async function addSolicitud(form) {
   return nueva;
 }
 
-module.exports = { readSolicitudes, addSolicitud };
+async function removeSolicitud(id) {
+  const solicitudes = readJsonSafe(DATA_PATH);
+  const nuevaLista = solicitudes.filter((s) => s.idSolicitud !== id);
+
+  if (nuevaLista.length === solicitudes.length) return false;
+
+  writeJsonAtomic(DATA_PATH, nuevaLista);
+  return true;
+}
+
+module.exports = {
+  readSolicitudes,
+  addSolicitud,
+  removeSolicitud
+};

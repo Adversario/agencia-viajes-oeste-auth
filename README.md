@@ -1,100 +1,99 @@
 # Agencia de Viajes Oeste — Autenticación Local y GitHub
 
 Aplicación desarrollada para la asignatura Desarrollo Frontend III
+Este repositorio contiene la evolución progresiva del proyecto desde autenticación básica hasta optimización avanzada con Next.js.
 
-La aplicación implementa:
-- Registro y Login local (Node.js + Express)
-- Autenticación GitHub OAuth
+# Funcionalidades implementadas
+
+## Autenticación
+
+- Registro y Login local
+- JWT almacenado en localStorage
 - Rutas protegidas
-- Dashboard con información del usuario
-- Logout completo
-- Persistencia local en archivo JSON
+- Logout seguro
+- OAuth 2.0 con GitHub
+- Validaciones frontend + backend
+- Persistencia en users.json
 
-Todo funciona en entorno local.
+## SSR Manual
 
-## Requisitos
+- Express + ReactDOMServer
+- renderToString
+- Hydration con hydrateRoot
+- Persistencia simulada
 
-- Node.js
-- npm
+## Next.js SSR
+
+- App Router
+- Server Components
+- Fetch en servidor (cache: no-store)
+- Formulario validado
+- Filtrado por estado
+- Persistencia simulada (JSON)
+- Eliminación de solicitudes
+
+## Optimización
+
+- Modularización real con next/dynamic
+- Lazy loading de:
+  - Formulario
+  - Filtro
+  - Modal de eliminación
+- Skeleton animado con espera simulada (3s)
+- Control por rol:
+  - Agente → ve todas las solicitudes
+  - Cliente → ve solo las asociadas
+- Validaciones completas frontend + backend
+- SSR mantenido correctamente
+
+# Requisitos
+
+- Node.js 18+
+- npm 9+
 
 Verificar:
 
 node -v
-
 npm -v
 
-## Instalación
+# Cómo ejecutar cada módulo
 
-### 1) Clonar el repositorio
-
-git clone https://github.com/Adversario/agencia-viajes-oeste-auth
-
-cd agencia-viajes-oeste-auth
-
-### 2) Instalar dependencias del Frontend
-
-npm install
-
-### 3) Instalar dependencias del Backend
+## Autenticación
 
 cd backend
-
 npm install
-
-## Variables de entorno
-
-El archivo .env viene incluido en este repositorio con credenciales ya completadas para que funcione la aplicación.
-
-Ubicación del archivo:
-backend/.env
-
-## Ejecución (2 terminales)
-
-### Terminal 1 — Backend
-
-cd backend
-
 npm run dev
 
-Debe mostrar:
-Backend corriendo en http://localhost:4000
+http://localhost:4000/
 
-### Terminal 2 — Frontend
+## Frontend
 
-Desde la raíz del proyecto:
-
+npm install
 npm start
 
-Abrir en el navegador:
-http://localhost:3000
+http://localhost:3000/
 
-## Usuarios de prueba
+## Backend REST
 
-### Usuario local (persistido en users.json)
+cd backend-tareas
+npm install
+npm run dev
 
-Email: hola@correo.cl  
+http://localhost:6060/
+
+Persistencia: backend-tareas/data/solicitudes.json
+
+## Next.js
+
+cd nextjs-app
+npm install
+npm run dev
+
+http://localhost:3001/
+
+# Usuario de prueba de autenticación local
+
+Email: hola@correo.cl
 Password: 123456
 
-También es posible registrar nuevos usuarios desde la pantalla de Registro.
-
-## Flujo de la aplicación
-
-### Login Local
-
-1. Ir a /login
-2. Ingresar email y password
-3. Acceso al Dashboard
-4. Token JWT guardado en localStorage
-
-### Login con GitHub
-
-1. En /login hacer clic en “Iniciar sesión con GitHub”
-2. Autorizar en GitHub
-3. Redirección automática al Dashboard
-4. Se muestran los datos del usuario GitHub
-
-### Logout
-
-- Elimina el token y los datos de sesión
-- Redirige a /login
-- Impide volver al Dashboard sin autenticación
+También es posible registrar nuevos usuarios.

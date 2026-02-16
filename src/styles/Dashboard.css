@@ -51,3 +51,80 @@
 .dash-button:hover {
   background: rgba(255, 107, 107, 0.22);
 }
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  padding: 16px;
+}
+
+.modal-card {
+  width: min(420px, 100%);
+  background: #0f1b2d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 18px 18px 14px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+
+  color: #e6edf3;
+}
+
+.modal-title {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.modal-text {
+  margin: 0 0 14px 0;
+  color: #9fb3c8;
+  font-size: 14px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.modal-btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: #e6edf3;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+
+.modal-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+}
+
+.modal-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.modal-danger {
+  background: rgba(220, 38, 38, 0.15);
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  color: #ff6b6b;
+}
+
+.modal-danger:hover {
+  background: rgba(220, 38, 38, 0.25);
+}

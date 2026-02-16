@@ -1,0 +1,30 @@
+[
+  {
+    "idSolicitud": 1,
+    "rut": "12345678-9",
+    "nombreCliente": "Prueba",
+    "email": "prueba@correo.cl",
+    "origen": "Santiago",
+    "destino": "Concepción",
+    "tipoViaje": "solo_ida",
+    "nombreBuscable": "Prueba",
+    "fechaSalida": "2026-01-01T15:00",
+    "fechaRegreso": "2026-03-01T15:00",
+    "fechaRegistro": "2026-02-13T19:47:50.384Z",
+    "estado": "pendiente"
+  },
+  {
+    "idSolicitud": 2,
+    "rut": "12345678-9",
+    "nombreCliente": "Prueba2",
+    "email": "prueba@correos.cl",
+    "origen": "Santiago",
+    "destino": "Arica",
+    "tipoViaje": "solo_ida",
+    "nombreBuscable": "Prueba2",
+    "fechaSalida": "2026-02-16T15:00",
+    "fechaRegreso": "2026-02-20T15:00",
+    "fechaRegistro": "2026-02-16T05:02:47.639Z",
+    "estado": "en_proceso"
+  }
+]

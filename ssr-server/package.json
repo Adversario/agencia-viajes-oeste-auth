@@ -1,0 +1,23 @@
+{
+  "name": "agencia-viajes-oeste-ssr-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SSR puro con React + Express",
+  "main": "server/src/server.js",
+  "scripts": {
+    "build:client": "esbuild client/src/client.jsx --bundle --outfile=client/dist/client.js --format=iife --global-name=SSRClient --jsx=automatic",
+    "build:ssr": "esbuild client/src/App.jsx --bundle --platform=node --format=cjs --outfile=server/dist/App.cjs --jsx=automatic --external:react --external:react-dom",
+    "build": "npm run build:client && npm run build:ssr",
+    "start": "node server/src/server.js",
+    "dev": "nodemon server/src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "nodemon": "^3.1.4"
+  }
+}

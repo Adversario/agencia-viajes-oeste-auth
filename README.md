@@ -54,6 +54,8 @@ Este repositorio contiene la evolución progresiva del proyecto desde autenticac
 Verificar:
 
 node -v
+
+
 npm -v
 
 # Cómo ejecutar cada módulo
@@ -61,7 +63,11 @@ npm -v
 ## Autenticación
 
 cd backend
+
+
 npm install
+
+
 npm run dev
 
 http://localhost:4000/
@@ -69,6 +75,8 @@ http://localhost:4000/
 ## Frontend
 
 npm install
+
+
 npm start
 
 http://localhost:3000/
@@ -76,7 +84,11 @@ http://localhost:3000/
 ## Backend REST
 
 cd backend-tareas
+
+
 npm install
+
+
 npm run dev
 
 http://localhost:6060/
@@ -86,7 +98,11 @@ Persistencia: backend-tareas/data/solicitudes.json
 ## Next.js
 
 cd nextjs-app
+
+
 npm install
+
+
 npm run dev
 
 http://localhost:3001/
